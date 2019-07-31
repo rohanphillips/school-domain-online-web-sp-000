@@ -24,7 +24,6 @@ class School
   end
 
   def sort()
-    binding.pry
-    @roster.sort
+    @roster.sort_by(&:first).map { |k, v| [k, v.sort]}.to_h
   end
 end
